@@ -3,16 +3,13 @@ import argparse
 
 def getConfig():
     resnet_path = './pretrain_model/resnet50-19c8e357.pth'
-    # load_test = './results/run-5/best_model_mae.pth'
+    load_test = './results/run-5/best_model_mae.pth'
     ''
-    load_test = 'F:/Desktop/othercode/SOD_Evaluation_Metrics-main/ORNet_results/run-11_4_BCE/best_model_mae.pth'
-
     parser = argparse.ArgumentParser()
 
     # Data
     parser.add_argument('--data_path', type=str, default='F:/datasets/SODdatasets/')
-    # parser.add_argument('--data_path', type=str, default='/home/congkc@1/datasets/SODdatasets/')
-
+    
     # Hyper-parameters
     parser.add_argument('--mode', type=str, default='test', choices=['train', 'test'])
     parser.add_argument('--save_map', type=bool, default=True, help='Save prediction map')
